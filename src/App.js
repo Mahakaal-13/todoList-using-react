@@ -1,24 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./Components/Header";
+import Form from "./Components/Form";
+import Todolist from "./Components/Todolist";
+import React, { useState } from 'react'
+
+
+
 
 function App() {
+
+
+  const [text, setText] = useState("")
+
+  const [todo, setTodo] = useState([])
+
+  // const saveMyTodo = (text) => {
+  //   let  todos = [...todo, {text:text,completed:false,id:Math.random()*1000}];
+  //   setTodo(todos)
+  //   // console.log(todos)
+  //   // console.log(todo.map((e,i) => <div key = {i}>{e}</div>))
+  // }
+ 
+  // const deleteMyTodo = (todos) => {
+  //   console.log('delete',todo)
+  //   setTodo(todos.filter((e) => e !== todos.id ));
+  // }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header title="Todo" />
+      <div className="container">
+      {/* <Form setTodo={(n) => saveMyTodo(n)}  */}
+        <Form setTodo={setTodo} todo={todo} setText={setText} text={text}/>
+      </div>
+      <Todolist todo={todo} setTodo={setTodo}/>
+      {/* {todo.map((e,i) => <div key = {i}>{e}</div>)} */}
+    </>
   );
 }
 

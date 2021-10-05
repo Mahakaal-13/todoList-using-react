@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.filter-todo {
+  padding: 6px;
+  cursor: pointer;
+}
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+
+
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  cursor: pointer;
+  pointer-events: none;
+}
