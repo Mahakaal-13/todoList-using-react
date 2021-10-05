@@ -38,6 +38,7 @@
 }
 
 .filter-todo {
+  width: 4rem;
   padding: 6px;
   cursor: pointer;
 }
@@ -57,4 +58,17 @@
   padding: 1rem;
   cursor: pointer;
   pointer-events: none;
+}
+
+@media screen and (max-width:700px) {
+  .singletodo {
+      width:28rem;
+    }
+   
+}
+@media screen and (max-width:450px) {
+  .singletodo {
+      width:18rem;
+    }
+   
 }
