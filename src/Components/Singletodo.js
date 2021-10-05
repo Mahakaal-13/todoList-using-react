@@ -24,7 +24,7 @@ export default function Singletodo(props) {
     }
     return (
         <div className="singletodo d-flex mb-2">
-            <li className={`list-group-item ${props.singletodo.completed? "completed":""}`} style={myLiStyle}></li>
+            <li className={`list-group-item ${props.singletodo.completed? "completed":""}`} style={myLiStyle}>{props.text}</li>
             <button className="btn btn-sm btn-success "onClick={checkHandler}>Checked</button>
             <button className="btn btn-sm btn-danger ms-1" onClick={deleteHandler}>Delete</button>
             
