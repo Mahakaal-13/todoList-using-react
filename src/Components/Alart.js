@@ -7,12 +7,11 @@ export default function Alart(props) {
     }
 
     let alartStyle = {
-        width: "35rem",
-        marginLeft: "28rem",
+       textAlign:"center"
     }
     return (
-       props.alart && <div className={`alert alert-${props.alart.type} `} role="alert" style={alartStyle}>
-        <div className="text-align-center">
+       props.alart && <div className={`alert alert-${props.alart.type} `} role="alert" >
+        <div style={alartStyle}>
         {capitalize(props.alart.type)} : {props.alart.text};
         </div>
       </div>
