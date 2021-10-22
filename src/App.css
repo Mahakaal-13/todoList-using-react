@@ -60,15 +60,36 @@
   pointer-events: none;
 }
 
+.myLiStyle{
+  width: 30rem;
+  height:3rem;
+}
+
+.myLiStyle1{
+  width: 27rem;
+}
+
 @media screen and (max-width:700px) {
   .singletodo {
       width:28rem;
     }
-   
+    .myLiStyle{
+      width: 20rem;
+      height:3rem;
+  }
+  .myLiStyle1{
+    width: 20rem;
+}
 }
 @media screen and (max-width:450px) {
   .singletodo {
       width:18rem;
     }
-   
+    .myLiStyle{
+      width: 13rem;
+      height:3rem;
+  }
+  .myLiStyle1{
+    width: 8rem;
+}
 }
